@@ -142,7 +142,7 @@ int GPSDriverSBF::configure(unsigned &baudrate, const GPSConfig &config)
 		return -1;
 	}
 
-	// Delete all sbf outputs on current COM port to remove clutter data
+	// Overwrite Stream1 outputs on current COM port 
 	char msg[MSG_SIZE];
 	snprintf(msg, sizeof(msg), SBF_CONFIG_RESET, com_port);
 
